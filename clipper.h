@@ -18,12 +18,12 @@
 #include <stdlib.h>
 #include <iostream>
 #include "base.h"
-
+#include "indonesia.h"
 //class clipper kota kecil berkursor yang dapat dibesar/diperkecil untuk memilih gambar mana yang akan diambil.
 class Clipper{
-//private:
-	// a map
-	
+private:
+	Indonesia map;
+
 public:
 	Point location;
 	Point Rect[4];//berisi point-point pada titik ujung segiempat
