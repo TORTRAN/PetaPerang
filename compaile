@@ -1,0 +1,2 @@
+how to compile:
+ketik "g++ -o cliper clipper.cpp base.cpp main.cpp" pada terminal berbasis ubuntu
