@@ -86,12 +86,73 @@ Indonesia::Indonesia(){
 	line.line(148,40,143,30);vectorIndonesia.push_back(line);
 	line.line(143,30,145,25);vectorIndonesia.push_back(line);
 	//sulawesi
-	// line.line(290,24,298,24);vectorIndonesia.push_back(line);
-	// line.line(298,24,298,18);vectorIndonesia.push_back(line);
-	// line.line(298,18,305,18);vectorIndonesia.push_back(line);
-	// line.line(305,18,205,24);vectorIndonesia.push_back(line);
-	// line.line(205,24,240,23);vectorIndonesia.push_back(line);
-	// line.line(240,23,240,10);vectorIndonesia.push_back(line);
+	line.line(260,24,268,24);vectorIndonesia.push_back(line);
+	line.line(268,24,268,18);vectorIndonesia.push_back(line);
+	line.line(268,18,275,18);vectorIndonesia.push_back(line);
+	line.line(275,18,275,24);vectorIndonesia.push_back(line);
+	line.line(275,24,305,24);vectorIndonesia.push_back(line);
+	line.line(305,24,305,14);vectorIndonesia.push_back(line);
+	line.line(305,14,315,14);vectorIndonesia.push_back(line);
+	line.line(315,14,315,19);vectorIndonesia.push_back(line);
+	line.line(315,19,312,19);vectorIndonesia.push_back(line);
+	line.line(312,19,312,32);vectorIndonesia.push_back(line);
+	line.line(312,32,290,34);vectorIndonesia.push_back(line);
+	line.line(290,34,265,34);vectorIndonesia.push_back(line);
+	line.line(265,34,265,50);vectorIndonesia.push_back(line);
+	line.line(265,50,275,52);vectorIndonesia.push_back(line);
+	line.line(275,52,277,45);vectorIndonesia.push_back(line);
+	line.line(277,45,292,43);vectorIndonesia.push_back(line);
+	line.line(292,43,292,40);vectorIndonesia.push_back(line);
+	line.line(292,40,300,40);vectorIndonesia.push_back(line);
+	line.line(300,40,300,50);vectorIndonesia.push_back(line);
+	line.line(300,50,292,50);vectorIndonesia.push_back(line);
+	line.line(292,50,292,55);vectorIndonesia.push_back(line);
+	line.line(292,55,275,57);vectorIndonesia.push_back(line);
+	line.line(275,57,275,64);vectorIndonesia.push_back(line);
+	line.line(275,64,280,64);vectorIndonesia.push_back(line);
+	line.line(280,64,288,62);vectorIndonesia.push_back(line);
+	line.line(288,62,298,81);vectorIndonesia.push_back(line);
+	line.line(298,81,289,89);vectorIndonesia.push_back(line);
+	line.line(289,89,280,80);vectorIndonesia.push_back(line);
+	line.line(280,80,275,78);vectorIndonesia.push_back(line);
+	line.line(275,78,275,70);vectorIndonesia.push_back(line);
+	line.line(275,70,270,70);vectorIndonesia.push_back(line);
+	line.line(270,70,270,95);vectorIndonesia.push_back(line);
+	line.line(270,95,258,95);vectorIndonesia.push_back(line);
+	line.line(258,95,258,78);vectorIndonesia.push_back(line);
+	line.line(258,78,260,78);vectorIndonesia.push_back(line);
+	line.line(260,78,260,55);vectorIndonesia.push_back(line);
+	line.line(260,55,253,54);vectorIndonesia.push_back(line);
+	line.line(253,54,253,43);vectorIndonesia.push_back(line);
+	line.line(253,43,260,43);vectorIndonesia.push_back(line);
+	line.line(260,43,260,24);vectorIndonesia.push_back(line);
+	//bali
+	line.line(232,115,242,115);vectorIndonesia.push_back(line);
+	line.line(242,115,242,125);vectorIndonesia.push_back(line);
+	line.line(242,125,232,125);vectorIndonesia.push_back(line);
+	line.line(232,125,232,115);vectorIndonesia.push_back(line);
+	//lombok
+	line.line(247,115,257,115);vectorIndonesia.push_back(line);
+	line.line(257,115,257,125);vectorIndonesia.push_back(line);
+	line.line(257,125,247,125);vectorIndonesia.push_back(line);
+	line.line(247,125,247,115);vectorIndonesia.push_back(line);
+	//sumba
+	line.line(263,115,274,113);vectorIndonesia.push_back(line);
+	line.line(274,113,274,108);vectorIndonesia.push_back(line);
+	line.line(274,108,286,108);vectorIndonesia.push_back(line);
+	line.line(286,108,286,120);vectorIndonesia.push_back(line);
+	line.line(286,120,274,120);vectorIndonesia.push_back(line);
+	line.line(274,120,274,124);vectorIndonesia.push_back(line);
+	line.line(274,124,262,125);vectorIndonesia.push_back(line);
+	line.line(262,125,263,115);vectorIndonesia.push_back(line);
+	//maluku1
+
+	//maluku2
+
+	//maluku3
+
+	//papua
+
 }
 		
 void Indonesia::Draw(FrameBuffer fb){
