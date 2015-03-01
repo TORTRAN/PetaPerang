@@ -1,6 +1,8 @@
 #include "base.h"
 #include "line.h"
 #include "indonesia.h"
+#include "clipper.h"
+#include "view.h"
 
 static struct termios old, New;
 
@@ -43,8 +45,27 @@ char getche(void)
 }
 
 int main(){
-	FrameBuffer FB;
-	Indonesia I;
-	I.Draw(FB);
+  FrameBuffer FB, FB1;
+  
+  Clipper clipper;
+  char temp = 'm';
+	while(temp != 'q'){
+    Indonesia I;
+    View view;
+    I.Draw(FB);
+    clipper.Draw(FB);
+    temp = getche();
+    switch(temp){
+      case 'w' : clipper.MoveUp(); break;
+      case 'a' : clipper.MoveLeft(); break;
+      case 's' : clipper.MoveDown(); break;
+      case 'd' : clipper.MoveRight(); break;
+    }
+    clipper.GetContent(I);
+    view.Draw(clipper,FB);
+
+    //system("clear");
+    clipper.inside.clear();
+  }
 	return 0;
 }
