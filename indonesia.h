@@ -1,15 +1,20 @@
 #ifndef INDONESIA_H
 #define INDONESIA_H
 
+#include <vector>
+#include "line.h"
+#include "base.h"
+using namespace std;
+
 class Indonesia{
 public:
 
 	vector<Line> vectorIndonesia;
-	FrameBuffer line;
+	Line line;
 
 	Indonesia();
 
-	void draw();
+	void Draw(FrameBuffer fb);
 };
 
 #endif

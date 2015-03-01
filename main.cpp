@@ -1,5 +1,6 @@
-#include "clipper.h"
 #include "base.h"
+#include "line.h"
+#include "indonesia.h"
 
 static struct termios old, New;
 
@@ -43,32 +44,7 @@ char getche(void)
 
 int main(){
 	FrameBuffer FB;
-
-	Clipper clip;
-	char input='s';
-
-	while(input!='q'){
-		system("clear");
-
-		clip.Draw(FB);
-		input=getche();
-
-		if(input=='i'){
-			clip.ZoomIn();
-		}else if(input=='o'){
-			clip.ZoomOut();
-		}else if(input=='w'){
-			clip.MoveUp();
-		}else if(input=='d'){
-			clip.MoveRight();
-		}else if(input=='x'){
-			clip.MoveDown();
-		}else if(input=='a'){
-			clip.MoveLeft();
-		}
-		munmap(FB.fbp, FB.screensize);
-	}
-	munmap(FB.fbp, FB.screensize);
-	close(FB.fbfd);
+	Indonesia I;
+	I.Draw(FB);
 	return 0;
 }

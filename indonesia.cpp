@@ -1,5 +1,6 @@
 #include "indonesia.h"
 
+
 Indonesia::Indonesia(){
 	//sumatera
 	line.line(10,10,20,10);vectorIndonesia.push_back(line);
@@ -83,7 +84,7 @@ Indonesia::Indonesia(){
 	line.line(185,60,185,45);vectorIndonesia.push_back(line);
 	line.line(185,45,178,40);vectorIndonesia.push_back(line);
 	line.line(178,40,173,30);vectorIndonesia.push_back(line);
-	line,line(173,30,175,25);vectorIndonesia.push_back(line);
+	line.line(173,30,175,25);vectorIndonesia.push_back(line);
 	//sulawesi
 	line.line(290,24,298,24);vectorIndonesia.push_back(line);
 	line.line(298,24,298,18);vectorIndonesia.push_back(line);
@@ -93,7 +94,7 @@ Indonesia::Indonesia(){
 	line.line(240,23,240,10);vectorIndonesia.push_back(line);
 }
 		
-void Indonesia::Draw(){
+void Indonesia::Draw(FrameBuffer fb){
 	for(int i = 0 ; i < vectorIndonesia.size() ; i++)
-		vectorIndonesia[i].draw();
+		vectorIndonesia[i].draw(fb);
 }
