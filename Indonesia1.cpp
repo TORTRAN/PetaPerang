@@ -35,28 +35,28 @@ Indonesia::Indonesia(){
 	line.line(125,75,115,75);vectorIndonesia.push_back(line);
 	line.line(115,75,115,65);vectorIndonesia.push_back(line);
 	//jawa
-	line.line(105,95,120,95);vectorIndonesia.push_back(line);
-	line.line(120,95,120,100);vectorIndonesia.push_back(line);
-	line.line(120,100,135,100);vectorIndonesia.push_back(line);
-	line.line(135,100,135,105);vectorIndonesia.push_back(line);
-	line.line(135,105,155,105);vectorIndonesia.push_back(line);//5
-	line.line(155,105,155,95);vectorIndonesia.push_back(line);
-	line.line(155,95,175,95);vectorIndonesia.push_back(line);
-	line.line(175,95,175,105);vectorIndonesia.push_back(line);
-	line.line(175,105,195,105);vectorIndonesia.push_back(line);
-	line.line(195,105,195,115);vectorIndonesia.push_back(line);//10
-	line.line(195,115,205,115);vectorIndonesia.push_back(line);
-	line.line(205,115,205,125);vectorIndonesia.push_back(line);
-	line.line(205,125,165,125);vectorIndonesia.push_back(line);
-	line.line(165,125,165,115);vectorIndonesia.push_back(line);
-	line.line(165,115,155,115);vectorIndonesia.push_back(line);//15
-	line.line(155,115,155,120);vectorIndonesia.push_back(line);
-	line.line(155,120,135,120);vectorIndonesia.push_back(line);
-	line.line(135,120,135,115);vectorIndonesia.push_back(line);
-	line.line(135,115,115,115);vectorIndonesia.push_back(line);
-	line.line(115,115,115,105);vectorIndonesia.push_back(line);//20
-	line.line(115,105,105,105);vectorIndonesia.push_back(line);
-	line.line(105,105,105,95);vectorIndonesia.push_back(line);
+	line.line(115,95,130,95);vectorIndonesia.push_back(line);
+	line.line(130,95,130,100);vectorIndonesia.push_back(line);
+	line.line(130,100,145,100);vectorIndonesia.push_back(line);
+	line.line(145,100,145,105);vectorIndonesia.push_back(line);
+	line.line(145,105,165,105);vectorIndonesia.push_back(line);//5
+	line.line(165,105,165,95);vectorIndonesia.push_back(line);
+	line.line(165,95,185,95);vectorIndonesia.push_back(line);
+	line.line(85,95,185,105);vectorIndonesia.push_back(line);
+	line.line(185,105,205,105);vectorIndonesia.push_back(line);
+	line.line(205,105,205,115);vectorIndonesia.push_back(line);//10
+	line.line(205,115,215,115);vectorIndonesia.push_back(line);
+	line.line(215,115,215,125);vectorIndonesia.push_back(line);
+	line.line(215,125,175,125);vectorIndonesia.push_back(line);
+	line.line(175,125,175,115);vectorIndonesia.push_back(line);
+	line.line(175,115,165,115);vectorIndonesia.push_back(line);//15
+	line.line(165,115,165,120);vectorIndonesia.push_back(line);
+	line.line(165,120,145,120);vectorIndonesia.push_back(line);
+	line.line(145,120,145,115);vectorIndonesia.push_back(line);
+	line.line(145,115,125,115);vectorIndonesia.push_back(line);
+	line.line(125,115,125,105);vectorIndonesia.push_back(line);//20
+	line.line(125,105,115,105);vectorIndonesia.push_back(line);
+	line.line(115,105,115,95);vectorIndonesia.push_back(line);
 	//kalimantan
 	// line.line(175,25,195,27);vectorIndonesia.push_back(line);
 	// line.line(195,27,210,20);vectorIndonesia.push_back(line);
