@@ -57,10 +57,43 @@ Indonesia::Indonesia(){
 	line.line(115,105,105,105);vectorIndonesia.push_back(line);
 	line.line(105,105,105,95);vectorIndonesia.push_back(line);
 	//kalimantan
+	line.line(175,25,195,27);vectorIndonesia.push_back(line);
+	line.line(195,27,210,20);vectorIndonesia.push_back(line);
+	line.line(210,20,230,5);vectorIndonesia.push_back(line);
+	line.line(230,5,250,5);vectorIndonesia.push_back(line);
+	line.line(250,5,255,10);vectorIndonesia.push_back(line);
+	line.line(255,10,255,15);vectorIndonesia.push_back(line);
+	line.line(255,15,265,23);vectorIndonesia.push_back(line);
+	line.line(265,23,263,28);vectorIndonesia.push_back(line);
+	line.line(263,28,253,25);vectorIndonesia.push_back(line);
+	line.line(253,25,243,35);vectorIndonesia.push_back(line);
+	line.line(243,35,253,40);vectorIndonesia.push_back(line);
+	line.line(253,40,255,50);vectorIndonesia.push_back(line);
+	line.line(255,50,245,65);vectorIndonesia.push_back(line);
+	line.line(245,65,240,65);vectorIndonesia.push_back(line);
+	line.line(240,65,240,72);vectorIndonesia.push_back(line);
+	line.line(240,72,230,72);vectorIndonesia.push_back(line);
+	line.line(230,72,230,65);vectorIndonesia.push_back(line);
+	line.line(230,65,215,65);vectorIndonesia.push_back(line);
+	line.line(215,65,215,71);vectorIndonesia.push_back(line);
+	line.line(215,71,205,71);vectorIndonesia.push_back(line);
+	line.line(205,71,205,67);vectorIndonesia.push_back(line);
+	line.line(205,67,195,67);vectorIndonesia.push_back(line);
+	line.line(195,67,185,60);vectorIndonesia.push_back(line);
+	line.line(185,60,185,45);vectorIndonesia.push_back(line);
+	line.line(185,45,178,40);vectorIndonesia.push_back(line);
+	line.line(178,40,173,30);vectorIndonesia.push_back(line);
+	line,line(173,30,175,25);vectorIndonesia.push_back(line);
+	//sulawesi
+	line.line(290,24,298,24);vectorIndonesia.push_back(line);
+	line.line(298,24,298,18);vectorIndonesia.push_back(line);
+	line.line(298,18,305,18);vectorIndonesia.push_back(line);
+	line.line(305,18,205,24);vectorIndonesia.push_back(line);
+	line.line(205,24,240,23);vectorIndonesia.push_back(line);
+	line.line(240,23,240,10);vectorIndonesia.push_back(line);
 }
 		
 void Indonesia::Draw(){
-	
+	for(int i = 0 ; i < vectorIndonesia.size() ; i++)
+		vectorIndonesia[i].draw();
 }
-
-

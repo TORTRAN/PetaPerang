@@ -5,7 +5,7 @@ class Indonesia{
 public:
 
 	vector<Line> vectorIndonesia;
-	Line line;
+	FrameBuffer line;
 
 	Indonesia();
 
