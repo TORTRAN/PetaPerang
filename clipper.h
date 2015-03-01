@@ -28,6 +28,7 @@ public:
 	Point location;
 	Point Rect[4];//berisi point-point pada titik ujung segiempat
 	int size;
+	std::vector<Line> inside;
 
 	Clipper();
 	void UpdateClip();//penomoran pojok dari sisi kiri atas lalu searah jarum jam, berisi definisi titik pojok
@@ -43,7 +44,9 @@ public:
 	void ZoomIn();
 	
 	void Draw(FrameBuffer FB);
-	//void get_content();
+	void Delete(FrameBuffer FB);
+	void GetContent(Indonesia I);
+
 };
 
 

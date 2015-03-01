@@ -10,7 +10,7 @@ FrameBuffer::FrameBuffer(){
 		printf("Error: cannot open framebuffer device.\n");
 		exit(1);
 	}
-	printf ("The framebuffer device was opened successfully.\n");
+	//printf ("The framebuffer device was opened successfully.\n");
 
 	/* get the fixed screen information */
 	if (ioctl (fbfd, FBIOGET_FSCREENINFO, &finfo)) {
@@ -31,7 +31,7 @@ FrameBuffer::FrameBuffer(){
 		printf ("Error: failed to map framebuffer device to memory.\n");
 		exit(4);
 	}
-	printf ("Framebuffer device was mapped to memory successfully.\n");
+	//printf ("Framebuffer device was mapped to memory successfully.\n");
 }
 
 void FrameBuffer::setPixel(int x, int y,Color color){
@@ -39,6 +39,14 @@ void FrameBuffer::setPixel(int x, int y,Color color){
     *(fbp + location) = color.Blue; // Some blue 
     *(fbp + location + 1) = color.Green; // A little green 
     *(fbp + location + 2) = color.Red; // A lot of red
+    *(fbp + location + 3) = 0; // No transparency 
+}
+
+void FrameBuffer::deletePixel(int x, int y){
+	int location = (x+vinfo.xoffset) * (vinfo.bits_per_pixel/8) + (y+vinfo.yoffset) * finfo.line_length;
+    *(fbp + location) = 0; // Some blue 
+    *(fbp + location + 1) = 0; // A little green 
+    *(fbp + location + 2) = 0; // A lot of red
     *(fbp + location + 3) = 0; // No transparency 
 }
 
@@ -50,6 +58,21 @@ void drawLine(int x0, int y0, int x1, int y1,FrameBuffer fb){
 
 	for (;;){
 		fb.setPixel(x0,y0,c);
+		if (x0==x1 && y0==y1) break;
+		e2 = 2 * error;
+		if (e2 >= dy) {error += dy; x0 += sx;}
+		if (e2 <= dx) {error += dx; y0 += sy;}
+	}
+}
+
+void deleteLine(int x0, int y0, int x1, int y1,FrameBuffer fb){
+	int dx = abs (x1-x0), sx = x0<x1 ? 1 : -1;
+	int dy = - abs (y1-y0), sy = y0<y1 ? 1 : -1;
+	int error = dx + dy, e2;
+	Color c(255,255,0);
+
+	for (;;){
+		fb.deletePixel(x0,y0);
 		if (x0==x1 && y0==y1) break;
 		e2 = 2 * error;
 		if (e2 >= dy) {error += dy; x0 += sx;}

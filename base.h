@@ -56,9 +56,11 @@ public:
 
 	FrameBuffer();
 	void setPixel(int x, int y,Color color);
+	void deletePixel(int x, int y);
 	/* data */
 };
 
 void drawLine(int x0, int y0, int x1, int y1,FrameBuffer fb);
+void deleteLine(int x0, int y0, int x1, int y1,FrameBuffer fb);
 
 #endif
