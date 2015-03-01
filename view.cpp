@@ -1,7 +1,7 @@
-#include "clipper.h"
-#include "base.h"
-#include "view.h"
-#include "line.h"
+#include "Clipper.h"
+#include "Base.h"
+#include "View.h"
+#include "Line.h"
 
 using namespace std;
 

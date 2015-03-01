@@ -1,5 +1,5 @@
-#include "clipper.h"
-#include "base.h"
+#include "Clipper.h"
+#include "Base.h"
 
 using namespace std;
 

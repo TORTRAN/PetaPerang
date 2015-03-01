@@ -1,8 +1,8 @@
-#include "base.h"
-#include "line.h"
-#include "indonesia.h"
-#include "clipper.h"
-#include "view.h"
+#include "Base.h"
+#include "Line.h"
+#include "Indonesia.h"
+#include "Clipper.h"
+#include "View.h"
 
 static struct termios old, New;
 

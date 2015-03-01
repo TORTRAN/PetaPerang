@@ -1,5 +1,5 @@
-#include "line.h"
-#include "base.h"
+#include "Line.h"
+#include "Base.h"
 
 Line::Line():c(255,0,0){
 	P1.x = 0;
