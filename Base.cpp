@@ -117,7 +117,7 @@ Point::Point(){
 	y = 0;
 }
 
-Point::Point(int x1, int y1){
+Point::Point(float x1, float y1){
 	x = x1;
 	y = y1;
 }

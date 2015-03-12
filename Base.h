@@ -36,11 +36,11 @@ class Color{
 //class Point defines point for coordinate to set
 class Point{
 public:
-	int x;
-	int y;
+	float x;
+	float y;
 
 	Point();
-	Point(int x1, int y1);
+	Point(float x1, float y1);
 };
 
 
