@@ -23,8 +23,20 @@ vector<Point> Transformator::translatePoligon(vector<Point> P, float xMovement, 
 	return P;
 }
 
-vector<Point> Transformator::reflectPoligon(vector<Point> P, Point reflectionPoint) {
-	//TODO stub
+vector<Point> Transformator::reflectPoligonXAxis(vector<Point> P) {
+	for (vector<Point>::iterator it = P.begin(); it != P.end(); ++it) {
+		(*it).y *= -1;
+		(*it).y = (fabs((*it).y - 0) < 0.000001) ? 0 : (*it).y;
+	}
+	return P;
+}
+
+vector<Point> Transformator::reflectPoligonYAxis(vector<Point> P) {
+	for (vector<Point>::iterator it = P.begin(); it != P.end(); ++it) {
+		(*it).x *= -1;
+		(*it).x = (fabs((*it).x - 0) < 0.000001) ? 0 : (*it).x;
+	}
+	return P;
 }
 
 vector<Point> Transformator::rotatePoligon(vector<Point> P, float degrees) {

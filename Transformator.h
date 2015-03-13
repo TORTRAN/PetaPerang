@@ -4,6 +4,8 @@
  *
  */
 
+/* Header and Pre-processor */
+ 
 #ifndef TRANSFORMATOR_H
 #define TRANSFORMATOR_H
 
@@ -13,6 +15,8 @@
 #include <vector>
 #include <cmath>
 using namespace std;
+
+/* Point Class (for debugging) */
 
 class Point{
 	public:
@@ -31,12 +35,34 @@ class Point{
 class Transformator {	
 	public:
 		Transformator();
+		/*
+		 * Constructor
+		 */
 		~Transformator();
 		vector<Point> translatePoligon(vector<Point> P, float xMovement, float yMovement);
-		vector<Point> reflectPoligon(vector<Point> P, Point reflectionPoint);
+		/*
+		 * Destructor
+		 */
+		vector<Point> reflectPoligonXAxis(vector<Point> P);
+		/*
+		 * Reflects a vector of Point to the X Axis
+		 */
+		vector<Point> reflectPoligonYAxis(vector<Point> P);
+		/*
+		 * Reflects a vector of Point to the Y Axis
+		 */
 		vector<Point> rotatePoligon(vector<Point> P, float degrees);
+		/*
+		 * Rotates a vector of Point by some degrees
+		 */
 		vector<Point> rotatePoligonWithPivot(vector<Point> P, float degrees, Point pivot);
+		/*
+		 * Rotates a vector of Point by some degrees to a pivot point
+		 */
 		vector<Point> resizePoligon(vector<Point> P, float multiplier);
-};\
+		/*
+		 * Not yet implemented
+		 */
+};
 
 #endif
