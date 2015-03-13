@@ -28,28 +28,44 @@ vector<Point> Transformator::reflectPoligon(vector<Point> P, Point reflectionPoi
 }
 
 vector<Point> Transformator::rotatePoligon(vector<Point> P, float degrees) {
-	float rad = degrees * PI / 180;
+	float rad = degrees * PI / 180, cosx, cosy, sinx, siny;
 	Point temp(0,0);
 	for (vector<Point>::iterator it = P.begin(); it != P.end(); ++it) {
-		//rotates the point
+		//fill the variables
 		temp.x = (*it).x; temp.y = (*it).y;
-		(*it).x = (cos(rad) * temp.x) - (sin(rad) * temp.y);
-		cout << "cos rad: " << (cos(rad)) << " sin rad: " << (sin(rad)) << endl;
-		(*it).y = (cos(rad) * temp.y) + (sin(rad) * temp.x);
+		cosx = cos(rad) * temp.x; cosy = cos(rad) * temp.y;
+		sinx = sin(rad) * temp.x; siny = sin(rad) * temp.y;
+		//set to 0
+		cosx = (fabs(cosx - 0) < 0.000001) ? 0 : cosx;
+		cosy = (fabs(cosy - 0) < 0.000001) ? 0 : cosy;
+		sinx = (fabs(sinx - 0) < 0.000001) ? 0 : sinx;
+		siny = (fabs(siny - 0) < 0.000001) ? 0 : siny;
+		//rotates the point
+		(*it).x = cosx - siny;
+		(*it).y = cosy + sinx;
 	}
 	return P;
 }
 
 vector<Point> Transformator::rotatePoligonWithPivot(vector<Point> P, float degrees, Point pivot) {
-	float rad = degrees * PI / 180;
+	float rad = degrees * PI / 180, cosx, cosy, sinx, siny;
 	Point temp(0,0);
 	for (vector<Point>::iterator it = P.begin(); it != P.end(); ++it) {
 		//changes the pivot point
 		temp.x = (*it).x - pivot.x; 
 		temp.y = (*it).y - pivot.y;
+		//fill the variables
+		temp.x = (*it).x; temp.y = (*it).y;
+		cosx = cos(rad) * temp.x; cosy = cos(rad) * temp.y;
+		sinx = sin(rad) * temp.x; siny = sin(rad) * temp.y;
+		//set to 0
+		cosx = (fabs(cosx - 0) < 0.000001) ? 0 : cosx;
+		cosy = (fabs(cosy - 0) < 0.000001) ? 0 : cosy;
+		sinx = (fabs(sinx - 0) < 0.000001) ? 0 : sinx;
+		siny = (fabs(siny - 0) < 0.000001) ? 0 : siny;
 		//rotates the point
-		(*it).x = (cos(rad) * temp.x) - (sin(rad) * temp.y);
-		(*it).y = (cos(rad) * temp.y) + (sin(rad) * temp.x);
+		(*it).x = cosx - siny;
+		(*it).y = cosy + sinx;
 		//returns the pivot point
 		(*it).x += pivot.x;
 		(*it).y += pivot.y;
