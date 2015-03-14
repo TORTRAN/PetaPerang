@@ -58,7 +58,10 @@ int main(){
 	 View view;
    
     I.Draw(FB);
-	
+	pes.move();
+	pes.Draw(FB);
+	per.move();
+	per.Draw(FB);
     clipper.Draw(FB);
     temp = getche();
     switch(temp){

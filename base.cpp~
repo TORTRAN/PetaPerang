@@ -125,16 +125,19 @@ Point::Point(int x1, int y1){
 int Point::getIndex(Point P1,Point P2){
 	int ret = 0;
 	if(y<P1.y){
-		ret = ret | 8;
+		ret += 1;
 	}
+	ret = ret << 1;
 	if(y>P2.y){
-		ret = ret | 4;
+		ret += 1;
 	}
+	ret = ret << 1;
 	if(x>P2.x){
-		ret = ret | 2;
+		ret += 1;
 	}
+	ret = ret << 1;
 	if(x<P1.x){
-		ret = ret | 1;
+		ret += 1;
 	}
 	return ret;
 }

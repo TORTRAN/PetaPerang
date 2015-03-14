@@ -43,7 +43,7 @@ public:
 
 	Point();
 	Point(int x1, int y1);
-	int getIndex(Point P1,Point P2);
+	char getIndex(Point P1,Point P2);
 };
 
 

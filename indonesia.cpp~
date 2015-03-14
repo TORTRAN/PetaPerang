@@ -212,7 +212,7 @@ void Indonesia::Draw(FrameBuffer fb){
 	for(int i = 0 ; i < vectorIndonesia.size() ; i++)
 		vectorIndonesia[i].draw(fb);
 	pes.move();
-	pes.Draw(fb);
+	pes.Draw(FB);
 	per.move();
-	per.Draw(fb);
+	per.Draw(FB);
 }

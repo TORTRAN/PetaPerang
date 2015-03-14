@@ -38,11 +38,11 @@ void Line::draw(FrameBuffer FB){
 }
 
 int Line::getX(int y){
-	int x = (y * (P1.x - P2.x) - P1.x * P2.y + P2.x * P1.y) / (P1.y - P2.y);
+	int x = (y*(P1.x-P2.x)-P1.y*(P1.x-P2.x)+P1.x*(P1.y-P2.y))/P1.y-P2.y;	
 	return x;
 }
 
 int Line::getY(int x){
-	int y = (x * (P1.y - P2.y) + P1.x * P2.y - P2.x * P1.y) / (P1.x - P2.x);
+	int y = (x*(P1.y-P2.y)+P1.y*(P1.x-P2.x)-P1.x*(P1.y-P2.y))/P1.x-P2.x;	
 	return y;
 }

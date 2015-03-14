@@ -51,7 +51,7 @@ void Clipper::ZoomOut(){
 }
 
 void Clipper::ZoomIn(){
-	if (size>=10){
+	if (size<=30){
 		size-=2;
 		UpdateClip();
 	}

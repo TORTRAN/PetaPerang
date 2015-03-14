@@ -97,7 +97,7 @@ void View::Draw(Clipper clipper, FrameBuffer FB){
 				// clipper.inside[i].P2.y += 50;
 			//	DrawLineView(clipper.inside[i].P2, clipper.inside[i].P1, clipper, FB);
 				// printf("%d %d\n", clipper.inside[i].P2.x, clipper.inside[i].P2.y);
-				Point Pt1;
+				/*Point Pt1;
 				Point Pt2;
 				Pt1.x = (clipper.inside[i].P1.x - clipper.Rect[0].x) * (200 / (clipper.Rect[2].x-clipper.Rect[0].x)) + 400;
 				Pt1.y = (clipper.inside[i].P1.y - clipper.Rect[0].y) * (200 / (clipper.Rect[2].y-clipper.Rect[0].y)) + 200;
@@ -109,33 +109,33 @@ void View::Draw(Clipper clipper, FrameBuffer FB){
 
 				Line templine(Pt1.x,Pt1.y,Pt2.x,Pt2.y);
 				//dikiri
-				if(index2&0x1){
+				if(index2&&0x1){
 					int tempx = 400;
 					int tempy = templine.getY(400);
 					Line line(Pt2.x,Pt2.y,tempx,tempy);
 					line.draw(FB);
 				}		
 				//dikanan
-				else if(index2&0x2){
+				else if(index2&&0x2){
 					int tempx = 600;
 					int tempy = templine.getY(600);
 					Line line(Pt2.x,Pt2.y,tempx,tempy);
 					line.draw(FB);
 				}		
 				//dibawah
-				else if(index2&0x4){
+				else if(index2&&0x4){
 					int tempx = templine.getX(400);
 					int tempy = 400;
 					Line line(Pt2.x,Pt2.y,tempx,tempy);
 					line.draw(FB);
 				}		
 				//diatas
-				else if(index2&0x8){
+				else if(index2&&0x8){
 					int tempx = templine.getX(200);
 					int tempy = 200;
 					Line line(Pt2.x,Pt2.y,tempx,tempy);
 					line.draw(FB);
-				}			
+				}*/			
 			}
 		}
 		// printf("%d %d\n", clipper.inside[i].P1.x, clipper.inside[i].P1.y);

@@ -11,7 +11,7 @@ class Indonesia{
 public:
 	
 	Pesawat pes;
-	Perahu per;
+	Perahu per(Point(50,145));
 
 	vector<Line> vectorIndonesia;
 	Line line;
